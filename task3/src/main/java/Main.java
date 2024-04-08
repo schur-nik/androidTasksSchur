@@ -36,7 +36,7 @@ public class Main {
                     case 3 :
                         System.out.println("Введите число для определения четности: ");
                         input = Integer.parseInt(reader.readLine());
-                        System.out.println("Число " + input + taskControlStructures3(input));
+                        System.out.println("Число " + input + " " + taskControlStructures3(input));
                         break;
                     case 4 :
                         System.out.println("Введите t (температуру), для определения погоды на улице: ");
@@ -105,27 +105,27 @@ public class Main {
 
     //1. Написать программу для вывода названия поры года по номеру
     //месяца.
-    public static String taskControlStructures1(int n_month) {
-        return switch (n_month) {
-            case 1, 2, 12 -> "Зима";
-            case 3, 4, 5 -> "Весна";
-            case 6, 7, 8 -> "Лето";
-            case 9, 10, 11 -> "Осень";
-            default -> "Неизвестная пора года";
-        };
+    public static String taskControlStructures1(int nMonth) {
+        switch (nMonth) {
+            case 1, 2, 12: return "Зима";
+            case 3, 4, 5: return "Весна";
+            case 6, 7, 8: return "Лето";
+            case 9, 10, 11 : return "Осень";
+            default: return "Неизвестная пора года";
+        }
     }
 
-    public static String taskControlStructures2(int n_month) {
-        if (n_month == 1 || n_month == 2 || n_month == 12) {
+    public static String taskControlStructures2(int nMonth) {
+        if (nMonth == 1 || nMonth == 2 || nMonth == 12) {
             return "Зима";
         }
-        else if (n_month == 3 || n_month == 4 || n_month == 5) {
+        else if (nMonth == 3 || nMonth == 4 || nMonth == 5) {
             return "Весна";
         }
-        else if (n_month == 6 || n_month == 7 || n_month == 8) {
+        else if (nMonth == 6 || nMonth == 7 || nMonth == 8) {
             return "Лето";
         }
-        else if (n_month == 9 || n_month == 10 || n_month == 11) {
+        else if (nMonth == 9 || nMonth == 10 || nMonth == 11) {
             return "Зима";
         }
         return "Неизвестная пора года";
@@ -133,10 +133,10 @@ public class Main {
 
     public static String taskControlStructures3(int number) {
         if (number % 2 == 0) {
-            return " четное";
+            return "четное";
         }
         else {
-            return " нечетное";
+            return "нечетное";
         }
     }
 
