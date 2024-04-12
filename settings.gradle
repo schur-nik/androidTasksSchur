@@ -1,4 +1,5 @@
 rootProject.name = 'androidTasksSchur'
 include 'task3'
 include 'task2'
+include 'task5'
 
