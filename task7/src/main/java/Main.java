@@ -10,7 +10,8 @@ public class Main {
         System.out.println(user3.getName() + ": зарплата " + user3.getSalary(380.20f));
 
         //Task 2
-        new Cat().doVoice();
-        new Dog().doVoice();
+        Animals animals = new Animals();
+        animals.doVoice(new Cat());
+        animals.doVoice(new Dog());
     }
 }
