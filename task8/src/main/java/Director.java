@@ -1,6 +1,9 @@
+import lombok.Getter;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
 public class Director extends Employee{
     private List<Employee> workers = new ArrayList<>();
 
@@ -13,11 +16,11 @@ public class Director extends Employee{
     }
 
     private String getAllWorkers() {
-        String result = "\n";
+        StringBuilder result = new StringBuilder("\n");
         for (Employee worker : this.workers) {
-            result = result + worker.toString() + "\n";
+            result.append(worker.toString()).append("\n");
         }
-        return result;
+        return result.toString();
     }
     @Override
     public String toString() {
@@ -28,7 +31,4 @@ public class Director extends Employee{
         return result;
     }
 
-    public List<Employee> getWorkers() {
-        return workers;
-    }
 }
