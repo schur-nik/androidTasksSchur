@@ -6,7 +6,7 @@ public class FindEmplService {
                 return 1;
             }
             if (worker.getProfessions() == Professions.DIRECTOR) {
-                if(findEmpl((Director) worker, nameWorker) == 1) {return 2;};
+                if(findEmpl((Director) worker, nameWorker) > 0) {return 2;};
             }
         }
         return 0;
